@@ -28,5 +28,6 @@ script:
   - "export SCMS"
   - "git --version"
   - "bundle install"
+  - "bundle exec rake db:migrate RAILS_ENV=test"
   - phantomjs --webdriver 4444 &
   - bundle exec rake test
