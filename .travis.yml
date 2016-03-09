@@ -1,0 +1,32 @@
+language: ruby
+rvm:
+  - 2.1.0
+  - 2.2.0
+  - 2.3.0
+
+addons:
+  postgresql: '9.4'
+
+services:
+  - postgresql
+
+branches:
+  only:
+    - master
+
+before_install:
+  - apt-get update -qq
+  - apt-get ---no-install-recommends install bzr csv git mercurial subversion
+  - psql -c 'create database travis_ci_test;' -U postgres
+  - cp config/database.yml.travis config/database.yml
+
+script:
+  - export DATABASE_ADAPTER=postgresql-9.4
+  - "SCMS=subversion,git"
+  - "expor SCMS"
+  - "git --version"
+  - "bundle install"
+  - "bundle exec rake config/database.yml"
+  - "bundle install"
+  - "bundle exec rake ci:setup"
+  - phantomjs --webdriver 4444 &
