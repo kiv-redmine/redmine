@@ -4,6 +4,8 @@ rvm:
   - 2.2.0
   - 2.3.0
 
+sudo: required
+
 addons:
   postgresql: '9.4'
 
@@ -15,8 +17,8 @@ branches:
     - master
 
 before_install:
-  - apt-get update -qq
-  - apt-get ---no-install-recommends install bzr csv git mercurial subversion
+  - sudo apt-get update -qq
+  - sudo apt-get ---no-install-recommends install bzr csv git mercurial subversion
   - psql -c 'create database travis_ci_test;' -U postgres
   - cp config/database.yml.travis config/database.yml
 
