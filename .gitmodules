@@ -1,0 +1,18 @@
+[submodule "plugins/redmine_tiny_mce"]
+	path = plugins/redmine_tiny_mce
+	url = git@github.com:kiv-redmine/redmine_tiny_mce.git
+[submodule "plugins/wiking"]
+	path = plugins/wiking
+	url = git@github.com:kiv-redmine/wiking.git
+[submodule "plugins/redmine_more_blocks_extension"]
+	path = plugins/redmine_more_blocks_extension
+	url = git@github.com:kiv-redmine/redmine_more_blocks_extension.git
+[submodule "plugins/redmine_default_project_page"]
+	path = plugins/redmine_default_project_page
+	url = git@github.com:kiv-redmine/redmine_default_project_page.git
+[submodule "plugins/redmine_improved_searchbox"]
+	path = plugins/redmine_improved_searchbox
+	url = git@github.com:kiv-redmine/redmine_improved_searchbox.git
+[submodule "plugins/redmine_per_project_formatting"]
+	path = plugins/redmine_per_project_formatting
+	url = git@github.com:kiv-redmine/redmine_per_project_formatting.git
